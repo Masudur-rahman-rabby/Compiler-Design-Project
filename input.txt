@@ -1,0 +1,289 @@
+import math
+import trycatch
+
+Main 
+{{
+	#Variable Declaration ::
+        t_int a,b,c;;
+        t_float x,y,z;;
+        crt p,q,r;;
+           
+
+        #IF | IF Wrong | IF_ELSE ::
+
+        iff SP 8 >> -3 EP
+	{{
+		for_ SP 9,20,3 EP
+	{{
+	      99 ++ 1;;
+	}} 
+	}}
+       
+       
+        iff SP 8 << 5 EP
+	{{
+		12 // 6;;
+	}}
+
+        
+	iff SP 8 >> 32 EP
+	{{
+		14 ++ 6;;
+	}}
+
+	els
+	{{
+		33 -- 10;;
+	}}
+       
+        #ELSE_ELSEIf_ELSE_Ladder :: 
+	
+	iff SP +4 << 2 EP  
+        {{
+	        15 -- 10;;
+	}}
+	elf SP 8 ++ 4 -- 2 EP
+        {{
+	        45 // 5;;
+	}}
+	
+	els
+        {{
+		19 ++ 2;;
+	}}
+	
+
+	#Nested IF ::
+
+	iff SP 3 >>= 8 EP
+	{{
+		iff SP 5 << 1 EP
+		{{
+			5 ++ 12;;
+		}}
+		els
+		{{
+			5 -- 2;;
+		}}
+
+	}}
+	els 
+	{{
+                5 ++ 3 ;;
+	}}
+        
+        #Nested ELSE ::
+
+	iff SP 3 >>= 8 EP
+	{{
+	     5 %% 4;;
+	}}
+	els 
+	{{
+		iff SP 9 >> 5 EP
+		{{
+			2 ** 2;;
+		}}
+		els
+		{{
+			18 // 2;;
+		}}
+
+	}}
+     
+        #NESTED IF(IF_ELSEIF_IF_Ladder) ::
+        iff SP 13 >>= 8 EP
+	{{
+                iff SP 4 <<= 2 EP  
+                {{
+	               15 -- 10;;
+	        }}
+	        elf SP  2 -- 2 EP
+                {{
+	               45 // 5;;
+	        }}
+	        els
+                {{
+		        19 -- 11;;
+	        }}
+        }}
+	els 
+	{{
+              90 // 2;; 
+	}}  
+
+        
+
+
+	#Loop block ::
+	for_ SP 9,20,3 EP
+	{{
+	      99 ++ 1;;
+	}} 
+        for_ SP 1,5 EP
+	{{
+	      9 %% 2;;
+	}}
+
+        #While Block ::
+
+	since SP 1 << 5 EP
+	{{
+             10 ++ 10;;
+	}}
+        since SP 10 >> 6 EP
+        {{
+             11 -- 1;;
+        }} 
+
+        #Switch Case ::
+	
+	Test SP 3 EP
+	{{
+	result 1: 14 ++ 16;;
+
+	result 2: 90 // 9;;
+
+	result 3: 6 -- 30;;
+        
+	result 4: 33 -- 30;; 
+
+	DEFAULT : 22 ** 3;;
+	
+	}}
+
+        #Print Fnction ::
+
+	Display SP 45 -- 55 EP;; 
+        
+        #Array    
+        array t_int  I SP 8 EP ;;
+
+        ## Variable assignment 
+         using 
+         PRINT_FUNCTION ## 
+        a = 80;;
+	b = 20;;
+	c = 0;;
+        
+    c = a ++ b;;
+	Display SP c EP;;
+	
+	c = a -- b;;
+	Display SP c EP;;
+
+	c = a ** b;;
+	Display SP c EP;;
+
+	c = a // b;;
+	Display SP c EP;;
+
+        
+	#factorial :: 
+	factorial_ SP 5 EP;;
+
+	#Odd_Even Solving ::
+ 	oddeven_ SP 10 EP;;
+        oddeven_ SP 11 EP;;
+        
+        #Prime Number Calculation ::
+        prime SP 3 EP;;
+        prime SP 10 EP;;
+        prime SP 1 EP;;
+
+        #Sorting ::
+        sort 5,2,8,7,1;;
+      
+        #GCD CAlCULATION ::
+        gcd SP 81,153 EP;;
+
+        #LCM CALCULATION ::
+        lcm SP 8,10 EP;;  
+     
+        #MAXIMUM_MINIMUM VALUE CAL ::
+
+        max SP 5,10 EP;;
+        min SP 5,-10 EP;;
+        
+        ## Increment
+         Decrement ##
+     
+         increment 100;;
+         decrement 7;;
+
+        #Logical Operator (AND) ::
+        #AND TRUE: 
+        SP 15 >> 10 EP AND_ SP 10 << 20 EP;;
+        #AND FALSE :
+        SP 15 >> 10 EP AND_ SP 10 << 5 EP;; 
+        
+        
+        #Logical Operator (OR) ::
+        #OR TRUE: 
+        SP 15 >> 10 EP OR_ SP 10 << 20 EP;;
+        #OR Also TRUE: 
+        SP 15 >>= 15 EP OR_ SP 10 >> 80 EP;; 
+        #OR FALSE :
+        SP 23 >>= 100 EP OR_ SP 10 <<= 5 EP;; 
+      
+	#Mathematical Expression ::
+   
+	sqr 2;;
+        sqrt  3;;
+        exponential 1;;
+        pow 4 ^ 2;;
+        log_ SP 5 EP;;
+        
+        #Trigonometric Expression ::   
+	sin_ SP 60 EP;;
+        cos_ SP 60 EP;;
+        tan_ SP 60 EP;;
+ 
+        
+
+    ## Build And 
+    Call Function  ##
+    Def F :
+    {{
+        11 // 11;;
+    }}
+    F : ;;
+
+	Def F SP t_int a , crt c  EP -> t_int :
+    {{
+        11 -- 5;; 
+    }} 
+
+	Def X :
+    {{
+  	 Display SP 100 EP;;
+    }}
+
+
+    ## Class 
+        Declaration ##
+
+ 	CLASS A
+	{{
+		a = 100;;
+    }}
+	CLASS B
+    {{
+                b = 200;;
+	}}
+
+
+	## TRY BLOCK
+          CATCH BlOCK ##
+	TRY 
+	{{
+	  100 // 0;;
+	}}
+	CATCH SP 100 EP
+	{{
+		11 %% 3;;
+	}}
+      
+
+      
+}}	
